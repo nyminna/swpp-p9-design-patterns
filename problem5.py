@@ -19,6 +19,21 @@ class PhoneCall:
             # TODO: fill this function
             # If you want, you can add time.sleep(0.1) before you call talk() in Counselor
             # to simulate the waiting time.
+            for c in self.counselors:
+                if not c.busy:
+            if c.busy == False:
+                c.talk()
+                c.busy = True
+            else:
+                print("No available counselor")
+
+            for c in self.counselors:
+                if not c.busy:
+                    c.busy = True.talk()
+
+
+            
+            
         else:
             time.sleep(0.1)
             print('Counselor will not talk to you')
